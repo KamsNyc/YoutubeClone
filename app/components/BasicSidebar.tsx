@@ -13,10 +13,10 @@ function BasicSidebar() {
   };
 
   // Function to close the sidebar when a click occurs outside of it
-  const closeSidebarOnClickOutside = (event) => {
+  const closeSidebarOnClickOutside = (event: MouseEvent) => {
     if (sidebarOpen) {
       const sidebar = document.querySelector(".sidebar"); // Replace with the actual class of your sidebar
-      if (sidebar && !sidebar.contains(event.target)) {
+      if (sidebar && !sidebar.contains(event.target as Node)) {
         setSidebarOpen(false);
       }
     }
